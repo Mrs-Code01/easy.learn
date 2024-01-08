@@ -1,0 +1,572 @@
+@font-face {
+  font-family: Ningst;
+  src: url(../Ningst\ Lovely\ Teacher\ Font\ by\ 7Ntypes.otf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../Poppins-Regular.ttf);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Poppins, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-color: rgb(250, 250, 250);
+}
+
+header {
+  background-color: black;
+  padding: 60px 0;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+header::before,
+header::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 250px;
+  height: 100%;
+}
+
+header::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.899));
+}
+
+header::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.899));
+}
+
+.header-slide {
+  display: flex;
+  animation: 65s slide infinite linear;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.header-slide h1 {
+  font-family: sans-serif;
+  font-size: 14rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px white;
+  margin: 0 40px;
+}
+
+/**********THIS IS THE END OF THE HEADER********/
+/**********THIS IS THE END OF THE HEADER********/
+/**********THIS IS THE END OF THE HEADER********/
+main {
+  padding: 60px 0;
+}
+
+.main-width {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-width h2 {
+  font-family: Ningst, sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+/********THIS IS THE END OF THE MAIN********/
+/********THIS IS THE END OF THE MAIN********/
+/********THIS IS THE END OF THE MAIN********/
+.section-one {
+  background-color: rgb(13, 13, 13);
+  padding: 60px 0;
+}
+
+.section-one-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-one-width h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: Ningst, sans-serif;
+  color: #fff;
+  font-weight: 400;
+}
+
+.section-one-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.container {
+  width: calc(100% / 4);
+  height: 400px;
+  perspective: 3000px;
+  padding: 10px;
+}
+
+.container:hover>.card {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+/***THE STORY-WHEN I HOVER ON THE CONTAINER, I WANT THE CARD TO TURN HALF-WAY, THAT IS, TO THE BACK...NOW, WHAT DO I WANT TO SHOW AT THE BACK, I WANT THE .back class TO SHOW AT THE BACK, THAT IS WHY I ALSO MAKE IT TURN HALF-WAY ALONG WITH THE CARD...NEXT, THE BACKFACE-VISIBILITY I PUT ON THE .back class, IS TO DISPLAY-NONE IT, THEN TO DISPLAY-BLOCK IT, I PUT THE transfrom:preserve-3d ON THE CARD**/
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 5px 4px rgba(0, 0, 0, .2);
+
+}
+
+.front,
+.back {
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-one {
+  background: rgb(163, 225, 232);
+}
+
+.front-two {
+  background: rgb(246, 215, 129);
+}
+
+.front-three {
+  background: rgb(29, 86, 46);
+}
+
+.front-four {
+  background: rgb(225, 170, 190);
+}
+
+.front h1 {
+  font-size: 20rem;
+  font-family: Ningst, sans-serif;
+}
+
+.back {
+  backface-visibility: hidden;
+  background-color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+/*********THIS IS THE END OF SECTION ONE*******/
+/*********THIS IS THE END OF SECTION ONE*******/
+/*********THIS IS THE END OF SECTION ONE*******/
+.section-two {
+  background-color: rgb(67, 65, 56);
+  padding: 60px 0;
+}
+
+.section-two h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: Ningst, sans-serif;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.section-two-width {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.section-two-flex {
+  padding: 20px;
+  border: 4px solid #000;
+  border-radius: 15px;
+  display: flex;
+}
+
+.section-two-btns {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-two-btns button {
+  outline: none;
+  border: 0;
+  padding: 12px 20px;
+  font-family: Ningst, sans-serif;
+  font-size: 2.3rem;
+  background-color: #271223;
+  color: #fff;
+  border-radius: 8px;
+  transition: .3s ease-in;
+}
+
+.section-two-btns button:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.slide p {
+  font-size: 2.3rem;
+  line-height: 1.6;
+}
+
+.slide {
+  width: 100%;
+  height: 220px;
+}
+
+.slide:nth-of-type(1) {
+  display: none;
+}
+
+.slide:nth-of-type(2) {
+  display: none;
+}
+
+.slide:nth-of-type(3) {
+  display: none;
+
+}
+
+.slide:nth-of-type(4) {
+  display: none;
+}
+
+.slide:nth-of-type(5) {
+  display: none;
+}
+
+.slide:nth-of-type(6) {
+  display: none;
+}
+
+.slide:nth-of-type(7) {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+/**********THIS IS THE END OF SECTION TWO*********/
+/**********THIS IS THE END OF SECTION TWO*********/
+/**********THIS IS THE END OF SECTION TWO*********/
+.section-three {
+  padding: 60px 0;
+}
+
+.section-three-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-three-content {
+  text-align: center;
+}
+
+.section-three-content h2 {
+  font-size: 3rem;
+  font-family: Ningst, sans-serif;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.start-quiz {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-family: Ningst, sans-serif;
+  font-weight: 800;
+  padding: 15px 40px;
+  border: 2px solid #56666f;
+  border-radius: 20px;
+  color: black;
+  background: #f0f4f6;
+  transform-style: preserve-3d;
+  transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+.start-quiz::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: #cad5db;
+  box-shadow: 0 0 0 2px #56666f, 0 9px 5px 0 #e4e8eb;
+  transform: translate3d(0, 10px, -1px);
+  transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+.start-quiz:hover {
+  background: #e4e8eb;
+  transform: translate(0, 5px);
+}
+
+
+.start-quiz:hover::before {
+  transform: translate3d(0, 7px, -1px);
+}
+
+.start-quiz:active {
+  transform: translate(0, 8px);
+}
+
+.start-quiz:active::before {
+  transform: translate3d(0, 0px, -1px);
+}
+
+.section-three-content .down-arrow {
+  width: 30px;
+  margin-bottom: 30px;
+  animation: down-arrow-animate 3s infinite;
+}
+
+.section-three-content .party-blower {
+  width: 40px;
+  transform: translateY(5px);
+}
+
+@keyframes down-arrow-animate {
+  50% {
+    transform: translate(0, -30px);
+  }
+}
+
+/*******THIS IS THE END OF SECTION THREE*******/
+/*******THIS IS THE END OF SECTION THREE*******/
+/*******THIS IS THE END OF SECTION THREE*******/
+footer {
+  background-color: #040404;
+  padding: 18px 0;
+}
+
+.footer-width {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-width a {
+  color: #ffcb5b;
+  font-size: 2.3rem;
+  font-family: Ningst, sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  transition: .3s ease-in;
+}
+
+.footer-width a:hover {
+  transform: translate(0, 3px);
+}
+
+
+
+@media screen and (max-width:1300px) {
+  .section-one-width {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:1120px) {
+  .section-two-width {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:1070px) {
+  .container {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width:940px) {
+  .container {
+    width: calc(100% / 2);
+  }
+
+  .main-width {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:840px) {
+  .section-two-width {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .slide {
+    height: 280px;
+  }
+
+  .section-three-width {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .slide {
+    height: 315px;
+  }
+}
+
+@media screen and (max-width:655px) {
+  .slide {
+    height: 325px;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .slide {
+    height: 355px;
+  }
+}
+
+@media screen and (max-width:570px) {
+  .container {
+    width: calc(100% / 1);
+  }
+
+  .main-width {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .slide {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width:482px) {
+  .slide {
+    height: 430px;
+  }
+}
+
+@media screen and (max-width:470px) {
+  .slide {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width:435px) {
+  .slide {
+    height: 460px;
+  }
+}
+
+@media screen and (max-width:418px) {
+  .slide {
+    height: 470px;
+  }
+}
+
+
+
+@media screen and (max-width:405px) {
+  .slide {
+    height: 530px;
+  }
+}
+
+@media screen and (max-width:390px) {
+  .slide {
+    height: 540px;
+  }
+
+  .slide p {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width:360px) {
+  .slide {
+    height: 580px;
+  }
+
+  .section-two-btns button {
+    padding: 12px 14px;
+  }
+
+  .section-two-btns {
+    padding: 13px;
+  }
+}
+
+@media screen and (max-width:340px) {
+  .slide {
+    height: 610px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .slide {
+    height: 620px;
+  }
+}
+
+@media screen and (max-width:312px) {
+  .slide {
+    height: 650px;
+  }
+}
+
+@media screen and (max-width:300px) {
+  .slide {
+    height: 790px;
+  }
+}
